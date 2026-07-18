@@ -1,0 +1,26 @@
+bundle:
+  name: insurance-claims-platform
+
+include:
+  - resources/jobs/*.yml
+
+targets:
+  test:
+    mode: development
+    default: true
+    workspace:
+      host: https://YOUR-WORKSPACE-URL.azuredatabricks.net
+    variables:
+      catalog: test
+
+  prod:
+    mode: production
+    workspace:
+      host: https://YOUR-WORKSPACE-URL.azuredatabricks.net
+    variables:
+      catalog: prod
+
+variables:
+  catalog:
+    description: Target Unity Catalog
+    default: test
