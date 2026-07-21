@@ -16,7 +16,7 @@ targets:
   prod:
     mode: production
     workspace:
-      host: https://YOUR-WORKSPACE-URL.azuredatabricks.net
+      host: https://dbc-4ba5b694-36c4.cloud.databricks.com
     variables:
       catalog: prod
 
